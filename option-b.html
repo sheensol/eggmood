@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Eggmood</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Interactive Image Vamp up with jQuery, CSS3 and PHP" />
+<meta name="keywords" content="jquery, php, fancy, css3, rotation" />
+<link type="text/css" href="css/jquery.ui.theme.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery.ui.core.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery.ui.resizable.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery.ui.slider.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+</head>
+
+<body>
+<div class="wraper">
+  <div class="transparent-wrap">
+    <header> <a href="#"></a> <img src="images/header-eggs.png" alt="" width="498" height="76" /> <span></span> </header>
+    <div class="contents-wrap">
+      <div class="optionB-contents">
+        <h1>Build it by graphically picking each piece</h1>
+        <div class="left-col">
+          <div class="left-col-moods"> <span class="pick-txt">Pick a mood</span>
+            <div class="left-col-mood"> <img src="images/happy-mood.gif" alt="" width="38" height="53" />
+              <p>Happy</p>
+            </div>
+            <div class="left-col-mood"> <img src="images/sad-mood.gif" alt="" width="38" height="53" />
+              <p>Sad</p>
+            </div>
+            <div class="left-col-mood"> <img src="images/angry-mood.gif" alt="" width="38" height="53" />
+              <p>Angry</p>
+            </div>
+            <div class="left-col-mood"> <img src="images/scared-mood.gif" alt="" width="38" height="53" />
+              <p>Scared</p>
+            </div>
+            <div class="left-col-mood"> <img src="images/surprizd-mood.gif" alt="" width="38" height="53" />
+              <p>Surprised</p>
+            </div>
+            <div class="left-col-mood" style="border-bottom:none;"> <img src="images/chilled-mood.gif" alt="" width="38" height="53" />
+              <p>Chilled</p>
+            </div>
+          </div>
+          <div class="left-col-top">
+            <h2>Pick a part for your Eggmood, move tabs for other parts</h2>
+            <ul>
+              <li> <a href="#" class="slected-tab"> <img src="images/tab-eyes.png" alt="" width="20" height="10" /> <span>Eyes</span> </a> </li>
+              <li> <a href="#"> <img src="images/tab-nose.png" alt="" width="8" height="16" style="padding-left:10px;" /> <span style="padding-left:7px;">Nose</span> </a> </li>
+              <li> <a href="#"> <img src="images/tab-mouth.png" alt="" width="17" height="12" /> <span style="padding-left:1px;">Mouth</span> </a> </li>
+              <li> <a href="#"> <img src="images/tab-hair.png" alt="" width="20" height="12" /> <span>Hair</span> </a> </li>
+            </ul>
+          </div>
+          <div class="names"> <span>All-business Jim</span> <span style="padding-top:10px; height:24px;">Biker Boy</span> <span style="padding-top:10px; height:24px;">Cute Suzie</span> <span>Helga the brave</span> <span style="padding-top:10px; height:24px;">Surfer dud</span> </div>
+          <div id="background" class="background"> <span>Here is what your Eggmood is starting to look like</span> <img id="obj_0" width="259" height="366" src="images/background.png" />
+            <div class="buttons"> <a href="#" id="submit" class="blue">Accept</a>
+              <form id="jsonform" action="merge.php" method="POST">
+                <input id="jsondata" name="jsondata" type="hidden" value="" autocomplete="off">
+                </input>
+              </form>
+              <a href="#" class="white optB-white">Creation Options</a> </div>
+          </div>
+          <div id="tools"> </div>
+          <div  class="objects">
+            <div id="objects">
+              <div class="obj_item"><img id="obj_1" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_2" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_3" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_4" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_5" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_6" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_7" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_8" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_9" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_10" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_11" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_12" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_13" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_14" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_15" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_16" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_17" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_18" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_19" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_20" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_21" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_22" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_23" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_24" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_25" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_26" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_27" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_28" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_29" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+              <div class="obj_item"><img id="obj_30" width="56" height="33" class="ui-widget-content" src="images/eye.png" alt="el"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"> Copyright 2011 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+  </div>
+</div>
+<script>
+            $(document).ready(function(id) {
+				var count_dropped_hits = 0;
+				var data = {
+                    "images": [
+                        {"id" : "obj_0" ,"src" : "background.jpg"	,"width" : "259", "height" : "366"}
+                    ]
+                };
+				// Array Remove - By John Resig (MIT Licensed)
+				Array.prototype.remove = function(from, to) {
+				  var rest = this.slice((to || from) + 1 || this.length);
+				  this.length = from < 0 ? this.length + from : from;
+				  return this.push.apply(this, rest);
+				};
+				
+				/*  remove an object from data */
+				$('.remove',$('#tools')).live('click',function(){
+					var $this = $(this);
+					
+					/* the element next to this is the input that stores the obj id */
+					var objid = $this.next().val();
+					/* remove the object from the sidebar */
+					$this.parent().remove();
+					/* ,from the picture */
+					var divwrapper = $('#'+objid).parent().parent();
+					$('#'+objid).remove();
+					/* add again to the objects list */
+					var image_elem 		= $this.parent().find('img');
+					var thumb_width 	= image_elem.attr('width');
+					var thumb_height 	= image_elem.attr('height');
+					var thumb_src 		= image_elem.attr('src');
+					$('<img/>',{
+						id 			: 	objid,
+						src			: 	thumb_src,
+						width		:	thumb_width, 
+						//height		:	thumb_height,
+						className	:	'ui-widget-content'
+					}).appendTo(divwrapper).resizable({
+						handles	: 'se',
+						stop	: resizestop 
+					}).parent('.ui-wrapper').draggable({
+						revert: 'invalid'
+					});
+					/* and unregister it - delete from object data */
+					var index = exist_object(objid);
+					data.images.remove(index);
+				});
+                
+                /*  checks if an object was already registered */
+                function exist_object(id){
+                    for(var i = 0;i<data.images.length;++i){
+                        if(data.images[i].id == id)
+                            return i;
+                    }
+                    return -1;
+                }
+				
+				/* triggered when stop resizing an object */
+				function resizestop(event, ui) {
+					//calculate and change values to obj (width and height)
+					var $this 		= $(this);
+					var objid		= $this.find('.ui-widget-content').attr('id');
+					var objwidth 	= ui.size.width;
+					var objheight 	= ui.size.height;
+				
+					var index 		= exist_object(objid);
+				
+					if(index!=-1) { //if exists (it should!) update width and height
+						data.images[index].width 	= objwidth;
+						data.images[index].height 	= objheight;
+					}
+                }
+				/* objects are resizable and draggable */
+                $('#objects img').resizable({
+                    /* only diagonal (south east)*/
+                    handles	: 'se',
+					stop	: resizestop 
+                }).parent('.ui-wrapper').draggable({
+                    revert	: 'invalid'
+                });
+				
+                $('#background').droppable({
+                    accept	: '#objects div', /* accept only draggables from #objects */
+                    drop	: function(event, ui) {
+                        var $this 		= $(this);
+                        ++count_dropped_hits;
+						var draggable_elem = ui.draggable;
+						draggable_elem.css('z-index',count_dropped_hits);
+						/* object was dropped : register it */
+                        var objsrc 		= draggable_elem.find('.ui-widget-content').attr('src');
+                        var objwidth 	= parseFloat(draggable_elem.css('width'),10);
+                        var objheight 	= parseFloat(draggable_elem.css('height'),10);
+					
+                        /* for top and left we decrease the top and left of the droppable element */
+                        var objtop		= ui.offset.top - $this.offset().top;
+                        var objleft		= ui.offset.left - $this.offset().left;
+                                       
+                        var objid		= draggable_elem.find('.ui-widget-content').attr('id');
+					
+                        var index 		= exist_object(objid);
+						
+                        if(index!=-1) { //if exists update top and left
+                            data.images[index].top 	= objtop;
+                            data.images[index].left = objleft;
+                        }
+                        else{					
+							/* register new one */
+                            var newObject = { 
+								'id' 		: objid,
+                                'src' 		: objsrc,
+                                'width' 	: objwidth,
+                                'height' 	: objheight,
+                                'top' 		: objtop,
+                                'left' 		: objleft,
+								'rotation'  : '0'
+                            };
+							data.images.push(newObject);
+							/* add object to sidebar*/
+							
+							$('<div/>',{
+								className	:	'item'
+							}).append(
+								$('<div/>',{
+									className	:	'thumb',
+									html		:	'<img width="50" class="ui-widget-content" src="'+objsrc+'"></img>'
+								})
+							).append(
+								$('<div/>',{
+									className	:	'slider',
+									html		:	'<span>Rotate</span><span class="degrees">0</span>'
+								})
+							).append(
+								$('<a/>',{
+									className	:	'remove'
+								})
+							).append(
+								$('<input/>',{
+									type		:	'hidden',
+									value		:	objid		// keeps track of which object is associated
+								})
+							).appendTo($('#tools'));
+							$('.slider').slider({
+								orientation	: 'horizontal',
+								max			: 180,
+								min			: -180,
+								value		: 0,
+								slide		: function(event, ui) {
+									var $this = $(this);
+									/* Change the rotation and register that value in data object when it stops */
+									draggable_elem.css({'-moz-transform':'rotate('+ui.value+'deg)','-webkit-transform':'rotate('+ui.value+'deg)'});
+									$('.degrees',$this).html(ui.value);
+								},
+								stop		: function(event, ui) {
+									newObject.rotation = ui.value;
+								}
+							});	
+                        }
+                    }
+                });
+				
+				/* User presses the download button */
+                $('#submit').bind('click',function(){
+                    var dataString  = JSON.stringify(data);
+                    $('#jsondata').val(dataString);
+					$('#jsonform').submit();
+                });
+
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<div class="footer"> Copyright 2011 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
